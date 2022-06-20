@@ -18,7 +18,7 @@ else
     {
         while (count <= numInput)
         {
-            if (count+2<=numInput)
+            if (count+2<numInput)
             {
                 Console.Write($"{count},");
                 count = count +2;
@@ -34,7 +34,7 @@ else
     {
         while (count <= absNumInput)
         {
-            if (count+2<=absNumInput)
+            if (count+2<absNumInput)
             {
                 Console.Write($"{count*(-1)},");
                 count = count +2;
