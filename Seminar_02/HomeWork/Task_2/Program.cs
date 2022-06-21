@@ -6,7 +6,7 @@ int num = new Random().Next(100, 1000);
 Console.WriteLine(num);
 
 
-int numWhile = Math.Abs(num);
+int numWhile = num;
 int count = 0;
 
 while (numWhile > 0 )
@@ -19,7 +19,7 @@ int[] array = new int[count];
  
 for (int i = count-1; i >=0; i--)
 {
-array[i] = Math.Abs(num%10);
+array[i] = num%10;
 num /=10;
 }
     
