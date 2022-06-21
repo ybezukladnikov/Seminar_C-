@@ -28,21 +28,36 @@
 
 // Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. 
 
-Console.Write("Input first number ");
+// Console.Write("Input first number ");
 
-int num1 = Convert.ToInt32(Console.ReadLine());
+// int num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Input second number ");
+// Console.Write("Input second number ");
 
-int num2 = Convert.ToInt32(Console.ReadLine());
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 % num2 == 0)
+// if (num1 % num2 == 0)
+// {
+//     Console.WriteLine("multiple");
+// }
+
+// else
+// {
+//     int div = num1 % num2;
+//     Console.WriteLine($"Remainder of division is {div}");
+// }
+
+// Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
+ 
+
+Console.Write("Input number ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num % 23 == 0 & num % 7 == 0)
 {
-    Console.WriteLine("multiple");
+    Console.WriteLine("Yes");
 }
-
 else
 {
-    int div = num1 % num2;
-    Console.WriteLine($"Remainder of division is {div}");
+    Console.WriteLine("No");
 }
