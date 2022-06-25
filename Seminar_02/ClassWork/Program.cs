@@ -1,29 +1,20 @@
 ﻿// Рандомно получает число и сравнивает первую цифру со второй. 
 
-// int what = new Random().Next(10, 99);
-// Console.WriteLine(what);
+int what = new Random().Next(10, 99);
+void maxMin()
+{
+    int arg = new Random().Next(10, 100);
+    Console.WriteLine("Current number is "+ arg);
+    int num1 = arg / 10;
+    int num2 = arg % 10;
+    int max = num1;
 
-// int num1 = what / 10;
-// int num2 = what % 10;
+    if (num2 > max) max = num2;
+    Console.WriteLine("Bigger digit  is " + max);
 
-// if (num1 == num2)
-// {
-//     Console.WriteLine("Input number is even");
-// }
+}
 
-// else
-// {
-
-//     if (num1 > num2)
-// {
-//     Console.WriteLine($"Max number is {num1}");
-// }
-// else 
-// {
-//     Console.WriteLine($"Max number is {num2}");
-// }
-
-// }
+maxMin();
 
 
 // Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. 
@@ -48,16 +39,16 @@
 // }
 
 // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
- 
 
-Console.Write("Input number ");
-int num = Convert.ToInt32(Console.ReadLine());
 
-if (num % 23 == 0 & num % 7 == 0)
-{
-    Console.WriteLine("Yes");
-}
-else
-{
-    Console.WriteLine("No");
-}
+// Console.Write("Input number ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// if (num % 23 == 0 & num % 7 == 0)
+// {
+//     Console.WriteLine("Yes");
+// }
+// else
+// {
+//     Console.WriteLine("No");
+// }
