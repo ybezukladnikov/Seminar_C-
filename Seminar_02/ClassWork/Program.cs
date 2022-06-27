@@ -54,34 +54,50 @@
 // Console.WriteLine(test);
 
 
+// int delete()
+// {
+//     int rand = new Random().Next(100, 1000);
+//     Console.WriteLine(rand);
+//     int firstNum = rand/100; 
+//     int secondNum = rand % 10;
+//     int result = firstNum * 10 + secondNum;
+//     return result;
+
+// }
+
+// int num = delete();
+// Console.WriteLine(num);
+
+
+
 // Напишите программу, которая будет принимать на вход два 
 // числа и выводить, является ли второе число кратным первому. 
 
 
 
-Console.Write("Input first number ");
+// Console.Write("Input first number ");
 
-int num1 = Convert.ToInt32(Console.ReadLine());
+// int num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Input second number ");
+// Console.Write("Input second number ");
 
-int num2 = Convert.ToInt32(Console.ReadLine());
+// int num2 = Convert.ToInt32(Console.ReadLine());
 
-void multiple(int arg1, int arg2)
-{
-    if (num1 % num2 == 0)
-    {
-        Console.WriteLine("multiple");
-    }
+// void multiple(int arg1, int arg2)
+// {
+//     if (num1 % num2 == 0)
+//     {
+//         Console.WriteLine("multiple");
+//     }
 
-    else
-    {
-        int div = num1 % num2;
-        Console.WriteLine($"Remainder of division is {div}");
-    }    
-}
+//     else
+//     {
+//         int div = num1 % num2;
+//         Console.WriteLine($"Remainder of division is {div}");
+//     }    
+// }
 
-multiple(num1, num2);
+// multiple(num1, num2);
 
 
 // if (num1 % num2 == 0)
