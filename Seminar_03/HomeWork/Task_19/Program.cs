@@ -64,7 +64,6 @@ void thirdNum(int arg)
     int count1 = 0;
 
     int n =1;
-    
     if(count%2==0) n=0;
     for (int i = (count/2)-1, j = (count/2)+n; i>=0; i--, j++)
     {
