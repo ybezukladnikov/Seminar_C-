@@ -75,7 +75,7 @@ void thirdNum(int arg)
     else    
         Console.WriteLine("No");
 
-    Console.WriteLine(count1);
+    
     
 }
 
