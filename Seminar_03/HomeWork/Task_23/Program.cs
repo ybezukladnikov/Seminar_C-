@@ -2,18 +2,41 @@
 
 void cubeNum(int arg)
 {
-    for(int i=1;i<=Math.Abs(arg);i++)
+    if (arg>0)
+    {
+        for(int i=1;i<=arg;i++)
     {
         
         double num = Math.Pow(i,3);
-        if (arg<0) num = num*(-1);
-        if(i==Math.Abs(arg))
+        
+        if(i==arg)
         {
             Console.Write(num);
             break;
         }
+        
         Console.Write($"{num},");
     }
+    }
+    else
+    {
+        for(int i=1;i>=arg;i--)
+    {
+        
+        double num = Math.Pow(i,3);
+        
+        if(i==arg)
+        {
+            Console.Write(num);
+            break;
+        }
+        
+        Console.Write($"{num},");
+    }
+    }
+
+
+    
 }
 
 Console.WriteLine("Input number: ");
