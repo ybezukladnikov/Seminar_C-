@@ -1,12 +1,13 @@
-﻿// На вход принимаем число. 
+﻿// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
 void cubeNum(int arg)
 {
-    for(int i=1;i<=arg;i++)
+    for(int i=1;i<=Math.Abs(arg);i++)
     {
         
         double num = Math.Pow(i,3);
-        if(i==arg)
+        if (arg<0) num = num*(-1);
+        if(i==Math.Abs(arg))
         {
             Console.Write(num);
             break;
