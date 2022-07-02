@@ -22,17 +22,33 @@
 четверти (x и y).
 */
 
-void showRange(int arg)
+// void showRange(int arg)
+// {
+//     if(arg == 1) Console.WriteLine("Coordinate X is positive and Coordinate Y is positive");
+//     if(arg == 2) Console.WriteLine("Coordinate X is negative and Coordinate Y is positive");
+//     if(arg == 3) Console.WriteLine("Coordinate X is negative and Coordinate Y is negative");
+//     if(arg == 4) Console.WriteLine("Coordinate X is positive and Coordinate Y is negative");
+//     if(arg < 1 | arg >4) Console.WriteLine("Input number is not correct");
+// }
+
+// Console.WriteLine("Input number of quarter: ");
+// int quarter = Convert.ToInt32(Console.ReadLine());
+
+// showRange(quarter);
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт квадраты чисел от 1 до N.
+
+Console.Write("Input number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+void squareNum(int arg)
 {
-    if(arg == 1) Console.WriteLine("Coordinate X is positive and Coordinate Y is positive");
-    if(arg == 2) Console.WriteLine("Coordinate X is negative and Coordinate Y is positive");
-    if(arg == 3) Console.WriteLine("Coordinate X is negative and Coordinate Y is negative");
-    if(arg == 4) Console.WriteLine("Coordinate X is positive and Coordinate Y is negative");
-    if(arg < 1 | arg >4) Console.WriteLine("Input number is not correct");
+    int [] array = new int[arg-1];
+    int numInList = 1;
+    for (int i = 0; i<arg-1; i++)
+    {
+        array[i] = numInList*numInList;
+        numInList++;
+    }
+
 }
-
-Console.WriteLine("Input number of quarter: ");
-int quarter = Convert.ToInt32(Console.ReadLine());
-
-showRange(quarter);
-

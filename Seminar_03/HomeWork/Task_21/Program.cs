@@ -11,7 +11,7 @@ double getDistance(double xa, double ya, double za, double xb,double yb,double z
     double hypotenuseXYsquare = Math.Pow(legX,2)+Math.Pow(legY,2);
     double result = Math.Sqrt(hypotenuseXYsquare+Math.Pow(legZ,2));
 
-    return result;
+    return Math.Round(result, 3);
 
 }
 
