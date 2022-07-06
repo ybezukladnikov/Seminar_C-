@@ -2,32 +2,42 @@
 // трёхзначными числами. Напишите программу, 
 // которая покажет количество чётных чисел в массиве.
 
-short [] CreateArray(short arg)
+void CreateArray(int arg)
 {
-    short [] array = new short[arg];
+    int [] array = new int[arg];
     Random random = new Random();
-    foreach (short i in array)
+    foreach (int i in array)
     {
-        array[i] = Convert.ToInt16(random.Next(100,1000));
-        
+        array[i] = random.Next(100,1000);
+        Console.WriteLine(array[i]);
     }
-    return array;
+
+    Console.WriteLine(array[0]);
+    
         
 }
 
-short Count(short [] arg)
-{
-    short count = 0;
-    foreach (short i in arg)
-    {
-        if (arg[i]%2==0)
-            count++;
-    }
+CreateArray(14);
 
-    return count;
-}
+// short[] myArray =CreateArray(8);
+// Console.WriteLine(myArray[7]);
+// foreach(short i in myArray)
+//     Console.WriteLine(myArray[i]);
 
-short count = Count(CreateArray(4));
-Console.WriteLine(count);
+
+// short Count(short [] arg)
+// {
+//     short count = 0;
+//     foreach (short i in arg)
+//     {
+//         if (arg[i]%2==0)
+//             count++;
+//     }
+
+//     return count;
+// }
+
+// short count = Count(CreateArray(4));
+// Console.WriteLine(count);
 
 
