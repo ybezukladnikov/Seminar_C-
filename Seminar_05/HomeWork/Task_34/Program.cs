@@ -22,14 +22,14 @@ short[] CreateArray(short arg)
 void ShowArray(short [] arg){
 
     Console.Write("Created array: [");    
-    foreach(short el in arg)
+    for(short i=0; i<arg.Length; i++)
     {
-        if (el == arg[arg.Length - 1])
+        if (i == arg.Length - 1)
         {
-            Console.Write(el);
+            Console.Write(arg[i]);
             break;
         }
-        Console.Write(el+", ");
+        Console.Write(arg[i]+", ");
     }
     Console.Write("]");   
     Console.WriteLine();   

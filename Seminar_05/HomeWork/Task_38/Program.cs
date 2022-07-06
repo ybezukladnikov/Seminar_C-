@@ -24,42 +24,33 @@ void ShowArray(double [] arg)
 {
 
     Console.Write("Created array: [");    
-    foreach(double el in arg)
+    for(short i=0; i<arg.Length; i++)
     {
-        if (el == arg[arg.Length - 1])
+        if (i == arg.Length - 1)
         {
-            Console.Write(el);
+            Console.Write(arg[i]);
             break;
         }
-        Console.Write(el+" ");
+        Console.Write(arg[i]+", ");
     }
     Console.Write("]");   
     Console.WriteLine();   
     
 }
 
-double FindMax(double [] arg)
+double FindMaxOrMin(double [] arg, bool numIsMax)
 {
     double max = arg[0];
-
-    foreach (double el in arg)
-    {
-        if (max<el) max = el;
-    }
-
-    return max;
-}
-
-double FindMin(double [] arg)
-{
     double min = arg[0];
 
     foreach (double el in arg)
     {
+        if (max<el) max = el;
         if (min>el) min = el;
+
     }
 
-    return min;
+    return numIsMax ? max:min;
 }
 
 double FindDif(double arg1, double arg2)
@@ -70,6 +61,9 @@ double FindDif(double arg1, double arg2)
     return dif;
 }
 
+bool numIsMax = true;
+
+
 Console.Write("Input size of array: ");
 short size = Convert.ToInt16(Console.ReadLine());
 
@@ -77,13 +71,12 @@ double[] myArray = CreateArray(size);
 
 ShowArray(myArray);
 
-double maxNum = FindMax(myArray);
+double maxNum = FindMaxOrMin(myArray, numIsMax);
 Console.WriteLine("Max number is "+maxNum);
 
-double minNum = FindMin(myArray);
+double minNum = FindMaxOrMin(myArray, !numIsMax);
 Console.WriteLine("Min number is "+minNum);
 
 double dif = FindDif(maxNum, minNum);
 
 Console.WriteLine("Difference between max number and min number is "+dif);
-
