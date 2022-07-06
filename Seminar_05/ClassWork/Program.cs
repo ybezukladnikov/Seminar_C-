@@ -99,14 +99,75 @@ void ShowArray(short [] arg){
     
 }
 
-short[] ChangeArray(short[] arg)
-{
-    for (int i = 0; i < arg.Length; i++)
-        arg[i]*=(-1);
+// short[] ChangeArray(short[] arg)
+// {
+//     for (int i = 0; i < arg.Length; i++)
+//         arg[i]*=(-1);
     
-    return arg;
+//     return arg;
 
-}
+// }
+
+// Console.Write("Input size of array: ");
+// short size = Convert.ToInt16(Console.ReadLine());
+
+// Console.Write("Input lower range: ");
+// short min = Convert.ToInt16(Console.ReadLine());
+
+// Console.Write("Input upper range: ");
+// short max = Convert.ToInt16(Console.ReadLine());
+
+// short[] myArray = CreateArray(size, min, max);
+
+// ShowArray(myArray);
+
+// short[] newArray = ChangeArray(myArray);
+
+// ShowArray(newArray);
+
+
+// Задайте массив. Напишите программу, которая определяет, 
+// присутствует ли заданное число в массиве.
+
+
+
+// Console.Write("Input size of array: ");
+// short size = Convert.ToInt16(Console.ReadLine());
+
+// Console.Write("Input lower range: ");
+// short min = Convert.ToInt16(Console.ReadLine());
+
+// Console.Write("Input upper range: ");
+// short max = Convert.ToInt16(Console.ReadLine());
+
+// short[] myArray = CreateArray(size, min, max);
+
+// myArray[2]=45;
+
+// ShowArray(myArray);
+
+// bool FindNum(short[] arg, short arg2)
+// {
+
+//     bool result = false;
+//     foreach(short el in arg){
+//         if (el ==arg2){
+//             result = true;
+//             break;
+//         }
+//     }
+         
+    
+//     return result;
+// }
+
+
+// bool result = FindNum(myArray, 45);
+// Console.WriteLine(result);
+
+// Задайте одномерный массив из 20 случайных чисел. 
+// Найдите количество элементов массива, 
+// значения которых лежат в отрезке [10,99].
 
 Console.Write("Input size of array: ");
 short size = Convert.ToInt16(Console.ReadLine());
@@ -119,12 +180,21 @@ short max = Convert.ToInt16(Console.ReadLine());
 
 short[] myArray = CreateArray(size, min, max);
 
+
 ShowArray(myArray);
 
-short[] newArray = ChangeArray(myArray);
+int FinsNums(short [] arg, short min, short max)
+{
+    int count = 0;
 
-ShowArray(newArray);
+    foreach(short el in arg)
+    {
+        if(el>=min && el<=max) count++;
+        
+    }
+    
+    return count;
+}
 
-
-
-
+int count = FinsNums(myArray, 10, 100);
+Console.WriteLine(count);
