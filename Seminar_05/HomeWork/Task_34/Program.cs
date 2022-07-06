@@ -6,6 +6,8 @@ short[] CreateArray(short arg)
 {
     short [] array = new short[arg];
     Random random = new Random();
+
+
     for (short i = 0; i < arg; i++)
     {
         array[i] = Convert.ToInt16(random.Next(100,1000));
