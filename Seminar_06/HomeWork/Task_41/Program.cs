@@ -13,9 +13,9 @@ int FindPositive(int n)
         int num = Convert.ToInt32(Console.ReadLine());
         if(num>0) count++;
         FindPositive(n-1);
-        return count;
-        
+          
     }
+    return count;
 }
 
 
