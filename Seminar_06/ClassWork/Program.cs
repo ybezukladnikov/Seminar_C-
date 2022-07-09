@@ -55,42 +55,55 @@
 
 // Переводит из десятичной в двоичную
 
-void  Cod(int arg)
-{
-    string result = string.Empty;
-    int count = 0;
+// void  Cod(int arg)
+// {
+//     string result = string.Empty;
+//     int count = 0;
 
-    while (arg>=1)
-    {
-        int tempr = arg%2;
-        result = result+ tempr.ToString();
-        arg /=2;
-        count++;
-    }
+//     while (arg>=1)
+//     {
+//         int tempr = arg%2;
+//         result = result+ tempr.ToString();
+//         arg /=2;
+//         count++;
+//     }
 
-    char [] myArray = new char[count];
+//     char [] myArray = new char[count];
 
-    for (int i = 0; i <count; i++ )
-    {
-        myArray[i] = result[i];
-    }  
+//     for (int i = 0; i <count; i++ )
+//     {
+//         myArray[i] = result[i];
+//     }  
 
-    for (int i = count-1; i>=0; i--)
-    {
-        Console.Write(myArray[i]);
-    }
+//     for (int i = count-1; i>=0; i--)
+//     {
+//         Console.Write(myArray[i]);
+//     }
 
     
+// }
+
+// Cod(20);
+
+
+// Ряд фибоначи
+
+void Fibbonachi(int first, int sekond, int n)
+{
+    int count = 0;
+    Console.Write(first+" " + sekond+ " ");
+    while(count< n)
+    {
+        int num = first+sekond;
+        Console.Write(num + " ");
+        first = sekond;
+        sekond = num;
+        count++;
+    
+    }
 }
 
-Cod(20);
-
-
-
-
-
-
-
+Fibbonachi(5,5,5);
 
 
 
