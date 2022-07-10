@@ -88,24 +88,42 @@
 
 // Ряд фибоначи
 
-void Fibbonachi(int first, int sekond, int n)
-{
-    int count = 0;
-    Console.Write(first+" " + sekond+ " ");
-    while(count< n)
+void ShowArray(int [] arg){
+
+    Console.Write("Created array: [");    
+    for(int i=0; i<arg.Length; i++)
     {
-        int num = first+sekond;
-        Console.Write(num + " ");
-        first = sekond;
-        sekond = num;
-        count++;
-    
+        if (i == arg.Length - 1)
+        {
+            Console.Write(arg[i]);
+            break;
+        }
+        Console.Write(arg[i]+", ");
     }
+    Console.Write("]");   
+    Console.WriteLine();   
+    
 }
 
-Fibbonachi(5,5,5);
 
 
+int[] Fibbonachi(int n)
+{
+    int [] array = new int[n];
+    array[0] = 0;
+    array[1] = 1;
+
+    for(int i =2; i<n; i++)
+    {
+        array[i] = array[i-1] + array[i-2];
+        Console.WriteLine(array[i]);
+    }
+    
+    return array;
+
+}
+
+ShowArray(Fibbonachi(10));
 
 
 
