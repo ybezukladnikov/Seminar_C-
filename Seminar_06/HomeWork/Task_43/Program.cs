@@ -26,6 +26,18 @@ double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("b2: ");
 double b2 = Convert.ToDouble(Console.ReadLine());
 
-var Coordinate = FindCoordinate(k1,2,10,4);
+if (k1 == k2 && b1 != b2)
+    Console.WriteLine("Two straight lines are parallel.");
 
-Console.WriteLine($"Intersection coordinates of two line: x = {Coordinate.Item1}, y = {Coordinate.Item2}");
+else if (k1 == k2 && b1 == b2) 
+    Console.WriteLine("Two straight lines coincide.");
+
+else 
+{
+    (double, double) Coordinate = FindCoordinate(k1,b1,k2,b2);
+
+    Console.WriteLine($"Intersection coordinates of two line: x = {Coordinate.Item1}, y = {Coordinate.Item2}");
+
+}    
+
+
