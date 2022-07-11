@@ -16,6 +16,16 @@ Console.WriteLine("Input coefficients for the first equation: ");
 Console.Write("k1: ");
 double k1 = Convert.ToDouble(Console.ReadLine());
 
+Console.Write("b1: ");
+double b1 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Input coefficients for the second equation: ");
+Console.Write("k2: ");
+double k2 = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("b2: ");
+double b2 = Convert.ToDouble(Console.ReadLine());
+
 var Coordinate = FindCoordinate(k1,2,10,4);
 
 Console.WriteLine($"Intersection coordinates of two line: x = {Coordinate.Item1}, y = {Coordinate.Item2}");

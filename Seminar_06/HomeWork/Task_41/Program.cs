@@ -3,22 +3,52 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-int count = 0;
+
+
 int FindPositive(int n)
 {
-    if (n == 0) return count;
-    else 
+    int countPositiveNum = 0;
+
+
+    for(int i = 1; i<=n; i++)
     {
-        Console.WriteLine("Input number: ");
+        Console.WriteLine($"Input number # {i}: ");
         int num = Convert.ToInt32(Console.ReadLine());
-        if(num>0) count++;
-        FindPositive(n-1);
-          
+        if(num>0) countPositiveNum++;
     }
-    return count;
+    
+
+    return countPositiveNum;
 }
 
 
 
-int myCount = FindPositive(3);
-Console.WriteLine(myCount);
+int Check()
+{
+    Console.WriteLine("Number of inspections should be a positive and greater than zero.");
+    Console.Write("Input Number of inspections is ");
+    int arg = Convert.ToInt32(Console.ReadLine());
+
+    if (arg >0) return arg;
+    else 
+    {
+        return Check();
+        
+    }
+    
+}
+
+
+Console.WriteLine();
+
+int numOfInspections = Check();
+
+Console.WriteLine();
+
+int numOfPositiveNumbers = FindPositive(numOfInspections);
+
+Console.WriteLine();
+
+Console.WriteLine($"Num of positive numbers is {numOfPositiveNumbers}");
+
+
