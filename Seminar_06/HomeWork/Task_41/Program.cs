@@ -23,7 +23,7 @@ int FindPositive(int n)
 
 
 
-int Check()
+int CheckCorrectNum()
 {
     Console.WriteLine("Number of inspections should be a positive and greater than zero.");
     Console.Write("Input Number of inspections is ");
@@ -32,7 +32,7 @@ int Check()
     if (arg >0) return arg;
     else 
     {
-        return Check();
+        return CheckCorrectNum();
         
     }
     
@@ -41,7 +41,7 @@ int Check()
 
 Console.WriteLine();
 
-int numOfInspections = Check();
+int numOfInspections = CheckCorrectNum();
 
 Console.WriteLine();
 
