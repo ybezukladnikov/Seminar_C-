@@ -36,8 +36,9 @@ int numOfLine = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Input number of column ");
 int numOfColumn = Convert.ToInt32(Console.ReadLine());
-
-
+Console.WriteLine();
+Console.WriteLine("Created Array");
+Console.WriteLine();
 double [,] myArray = CreateArray(numOfLine,numOfColumn);
 
 ShowArray(myArray);
