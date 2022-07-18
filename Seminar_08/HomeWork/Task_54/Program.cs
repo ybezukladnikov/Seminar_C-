@@ -45,7 +45,7 @@ int [,] ChangeArray(int[,] array)
         {
             for(int j=0;j<array.GetLength(1)-1; j++)
         {
-                if(array[i,j]>array[i,j+1])
+                if(array[i,j]<array[i,j+1])
                 {
                     int tempriory = array[i,j+1];
                     array[i,j+1] = array[i,j];
